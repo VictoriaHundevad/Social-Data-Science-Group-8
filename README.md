@@ -4,55 +4,51 @@ Answer 3.1.3
 
 #Answer 3.1.3
 
-l1 = ['r ', 'Is', '>', ' < ', 'g ', '?']
+    l1 = ['r ', 'Is', '>', ' < ', 'g ', '?']
 
+    ''.join([l1[1], ' ', l1[0].strip(), l1[2], l1[-2].strip(), str(l1[-1])])
 
-''.join([l1[1], ' ', l1[0].strip(), l1[2], l1[-2].strip(), str(l1[-1])])
-
-
-'Is r>g?'
+    'Is r>g?'
 
 # Answer 3.1.4
 
-words = {}
-values = []
-keys = ['animal', 'coffee', 'python', 'unit', 'knowledge', 'tread', 'arise']
-vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-
-​
-
-for key in keys:
-    if key[0] in vowels : 
+    words = {}
+    values = []
+    keys = ['animal', 'coffee', 'python', 'unit', 'knowledge', 'tread', 'arise']
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    
+    for key in keys:
+      if key[0] in vowels : 
         values.append(True)
-    else :
+      else :
         values.append(False)
-print(values)
-​
-keys_values = list(zip(keys, values))
-words = dict(keys_values)
-dict(words)
-[True, False, False, True, False, False, True]
-{'animal': True,
- 'coffee': False,
- 'python': False,
- 'unit': True,
- 'knowledge': False,
- 'tread': False,
- 'arise': True}
+    print(values)
+
+    keys_values = list(zip(keys, values))
+    words = dict(keys_values)
+    dict(words)
+    [True, False, False, True, False, False, True]
+    {'animal': True,
+     'coffee': False,
+     'python': False,
+     'unit': True,
+     'knowledge': False,
+     'tread': False,
+     'arise': True}
 
 # Answer 3.3.2
 
 #Creating function that can generate correct URL
-import requests 
-def construct_link(table_id, variables):
-    base = 'https://api.statbank.dk/v1/data/{id}/JSONSTAT?lang=en'.format(id = table_id)
+    import requests 
+    def construct_link(table_id, variables):
+     base = 'https://api.statbank.dk/v1/data/{id}/JSONSTAT?lang=en'.format(id = table_id)
     
-    for var in variables:
-        base += '&{v}'.format(v = var)
+        for var in variables:
+         base += '&{v}'.format(v = var)
 ​
-    return base 
-construct_link('FOD', ['Tid=*', 'BARNKON=P'])
-'https://api.statbank.dk/v1/data/FOD/JSONSTAT?lang=en&Tid=*&BARNKON=P'
+       return base 
+      construct_link('FOD', ['Tid=*', 'BARNKON=P'])
+    'https://api.statbank.dk/v1/data/FOD/JSONSTAT?lang=en&Tid=*&BARNKON=P'
 
 #Wrapping a function around saving a file, pulled from a URL
 def function2(x):
