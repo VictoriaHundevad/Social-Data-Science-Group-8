@@ -3,11 +3,13 @@
 Answer 3.1.3
 
 #Answer 3.1.3
-​
+
 l1 = ['r ', 'Is', '>', ' < ', 'g ', '?']
-​
+
+
 ''.join([l1[1], ' ', l1[0].strip(), l1[2], l1[-2].strip(), str(l1[-1])])
-​
+
+
 'Is r>g?'
 
 # Answer 3.1.4
@@ -16,7 +18,9 @@ words = {}
 values = []
 keys = ['animal', 'coffee', 'python', 'unit', 'knowledge', 'tread', 'arise']
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+
 ​
+
 for key in keys:
     if key[0] in vowels : 
         values.append(True)
